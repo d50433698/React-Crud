@@ -39,6 +39,13 @@ export default function Users() {
                 <Link to={{ pathname: `/user/${user.id}` }}>{user.name}</Link>
               </td>
               <td>
+                <Link to={{ pathname: `/user/${user.id}` }}>
+                  <button type="button" class="btn btn-info">
+                    Detail
+                  </button>
+                </Link>
+              </td>
+              <td>
                 <button
                   onClick={handleDelete(user.id)}
                   type="button"
