@@ -26,6 +26,9 @@ export default function UserDetail() {
             User Address: {user.address.city} - {user.address.street} -
             {user.address.suite}
           </p>
+          <p>
+            User Email: {user.email}
+          </p>
         </div>
       ))}
     </div>
