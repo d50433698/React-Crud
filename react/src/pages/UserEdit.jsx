@@ -15,7 +15,7 @@ export default function UserDetail() {
     event.preventDefault();
     const data = new FormData(event.target);
     let userService = new UserService();
-    userService.addUser(data).then(response => console.log(response));
+    userService.updateUser(data).then(response => console.log(response));
   }
 
   useEffect(() => {
