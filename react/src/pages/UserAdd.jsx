@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 import { Button, Card, Image } from 'semantic-ui-react';
 
 
-export default function UserDetail() {
+export default function UserAdd() {
   const [users, setUsers] = useState([]);
   function handleSubmit(e){
+    event.preventDefault();
+    const data = new FormData(event.target);
     let userService = new UserService();
     userService.addUser(e).then(response => console.log(response));
   }
@@ -16,7 +18,7 @@ export default function UserDetail() {
     <div>
       User
       <div>
-        <form onSubmit={handleSubmit(e)}>
+        <form onSubmit={handleSubmit}>
           {' '}
           <div>
             <label>User Name: </label>
