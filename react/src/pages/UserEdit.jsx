@@ -3,7 +3,7 @@ import UserService from '../services/userService';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
-export default function UserDetail() {
+export default function UserEdit() {
   let { id } = useParams();
   const [user, setUser] = useState([]);
  
